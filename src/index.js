@@ -1,6 +1,6 @@
-import one from './module/one'
+import modal from './module/modal'
 
 console.log('Привет');
 
-one()
+modal()
 
