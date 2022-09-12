@@ -1,6 +1,8 @@
-import modal from './module/modal'
+import modal from './module/modal';
+import mobileMenu from './module/mobile-menu';
 
-console.log('Привет');
 
-modal()
+modal();
+mobileMenu()
+
 
