@@ -4,11 +4,16 @@ const modal = () => {
   const body = document.querySelector('body');
   const modalOverlay = document.querySelector('.modal-overlay');
   const modalCallback = document.querySelector('.modal-callback');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
   body.addEventListener('click', (e) => {
     if (e.target.closest('.callback-btn')) {
       e.preventDefault();
       modalOverlay.style.display = 'block';
+
+      if(mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open')
+      }    
 
       if (window.innerWidth > 768) {
         animate({
