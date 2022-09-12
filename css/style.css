@@ -282,7 +282,7 @@ a.absolute {
 	cursor: pointer;
 }
 .modal-callback {
-	display: none;
+	/* display: none; */
 	position: fixed;
 	top: 20%;
 	left: 50%;
@@ -292,6 +292,7 @@ a.absolute {
 	background: #fff;
 	padding: 55px 25px 35px;
 	z-index: 99;
+	opacity: 0;
 }
 #responseMessage .modal-content.error {
 	color: #2fab6d;
