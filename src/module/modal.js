@@ -6,8 +6,10 @@ const modal = () => {
   const modalCallback = document.querySelector('.modal-callback');
   const mobileMenu = document.querySelector('.mobile-menu');
 
+  // .button-services
+
   body.addEventListener('click', (e) => {
-    if (e.target.closest('.callback-btn')) {
+    if (e.target.closest('.callback-btn') || e.target.closest('.button-services')) {
       e.preventDefault();
       modalOverlay.style.display = 'block';
 

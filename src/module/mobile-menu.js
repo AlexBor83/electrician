@@ -19,7 +19,7 @@ const mobileMenu = () => {
         handelMobileMenu();
 
       } else if(e.target.classList.contains('overlay') ||e.target.closest('.mobile-menu-close')) {
-        handelMobileMenu();
+        mobileMenu.classList.remove('open');
       }
 
       mobileMenuLinks.forEach(link => {
