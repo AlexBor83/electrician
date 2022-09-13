@@ -12,7 +12,7 @@ const modal = () => {
       modalOverlay.style.display = 'block';
 
       if(mobileMenu.classList.contains('open')) {
-        mobileMenu.classList.remove('open')
+        mobileMenu.classList.remove('open');
       }    
 
       if (window.innerWidth > 768) {
