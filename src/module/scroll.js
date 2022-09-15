@@ -15,10 +15,8 @@ const scroll = () => {
     let СoordinateYShowUpBtn = table.clientHeight;
     let СoordinateYDisableUpBtn = servicesSection.clientHeight;
 
-    if (scrolY >= СoordinateYShowUpBtn && scrolY < СoordinateYDisableUpBtn) {
+    if (scrolY >= СoordinateYShowUpBtn) {
       upBtn.style.display = 'block';
-    } else if (scrolY >= СoordinateYDisableUpBtn) {
-      upBtn.style.display = 'none';
     } else {
       upBtn.style.display = 'none';
     }
