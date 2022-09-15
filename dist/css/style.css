@@ -1022,9 +1022,10 @@ video#video_background {
 .accordeon .element.active .title:before {
 	background: url(../images/minus.png) 50% 50% no-repeat #333;
 }
-.accordeon > div:first-of-type .element-content {
+.accordeon > .element.active .element-content {
 	display: block;
 }
+
 .accordeon .element .title:hover:before {
 	background-color: #333;
 }
