@@ -987,7 +987,7 @@ video#video_background {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    z-index: 100
+    z-index: 10
 }
 .dots .dot {
     cursor: pointer;
