@@ -987,7 +987,7 @@ video#video_background {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    z-index: 100
+    z-index: 10
 }
 .dots .dot {
     cursor: pointer;
@@ -1134,11 +1134,11 @@ video#video_background {
 
 .arrow-left {
 	transform: rotate(180deg);
-	margin-right: 20px;
+	left: 46%;
 }
 
 .arrow-right {
-	margin-left: 20px;
+	left: 53%;
 }
 
 .services-section .element {
@@ -1251,8 +1251,7 @@ video#video_background {
 	overflow: hidden;
 }
 .services-elements img {
-	top: 90%;
-	left: 50%;
+	top: 90%;	
 }
 
 .services-elements > .row > hr:nth-of-type(2n) {
