@@ -1,8 +1,4 @@
 const sliderTop = () => {
-  // слайдер - top-slider
-  // слайды - item
-  // Активный слайд - item-active
-  //   dot dot-active
 
   document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.top-slider');
