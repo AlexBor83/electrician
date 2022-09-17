@@ -13,8 +13,6 @@ const sendForm = () => {
   const errorText = 'Ошибка..';
   const succsessText = 'Данные отправлены';
 
-  // <input type="submit" class="button btn feedback" value="Отправить" />
-
   inputName.addEventListener('input', (e) => {
     e.target.value = e.target.value.replace(/[^А-Яа-я]/g, '');
   });
@@ -47,12 +45,11 @@ const sendForm = () => {
   const sendData = (data) => {
     return fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json; charset=UTF-8"
-        }
-    })
-    .then(res => res.json());
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+    }).then((res) => res.json());
   };
 
   const submitForm = () => {
@@ -63,35 +60,36 @@ const sendForm = () => {
       dataForm.name = inputName.value;
       dataForm.tel = inputTel.value;
 
-      sendData(dataForm).then((data) => {
-        statusBlock.textContent = succsessText;
+      sendData(dataForm)
+        .then((data) => {
+          statusBlock.textContent = succsessText;
 
-        const cleanStatusBlock = () => {
-          statusBlock.textContent = '';
-        };
+          const cleanStatusBlock = () => {
+            statusBlock.textContent = '';
+          };
 
-        const closeForm = () => {
+          const closeForm = () => {
             modalOverlay.style.display = 'none';
-        };
+          };
 
-        setTimeout(cleanStatusBlock, 1500)
-        setTimeout(closeForm, 2000)
+          setTimeout(cleanStatusBlock, 1500);
+          setTimeout(closeForm, 2000);
 
-        formElements.forEach(input => {
-            input.value = ''
+          formElements.forEach((input) => {
+            input.value = '';
+          });
         })
-      })
-      .catch(() => {
-        statusBlock.textContent = errorText;        
-      })
+        .catch(() => {
+          statusBlock.textContent = errorText;
+        });
     } else {
-        statusBlock.textContent = '';
-        alert('Данные не валидны'); 
+      statusBlock.textContent = '';
+      alert('Данные не валидны');
     }
   };
 
   form.addEventListener('submit', (e) => {
-    e.preventDefault();   
+    e.preventDefault();
     submitForm();
   });
 };
