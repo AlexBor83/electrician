@@ -857,7 +857,14 @@ hr.white {
 	overflow: hidden;
 	height: 450px;
 	position: relative;
+	display: none;
 }
+
+.top-slider .item-active {
+	display: block;
+
+}
+
 .top-slider .item:before {
 	content: "";
 	display: block;
@@ -968,6 +975,48 @@ video#video_background {
 		height: 600px;
 	}
 }
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 20px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 10
+}
+.dots .dot {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: solid #fff;
+    display: inline-block;
+    -webkit-transition: background-color, -webkit-transform .4s;
+    transition: background-color, transform .4s, -webkit-transform .4s
+}
+.dots .dot-active {
+    background-color: #19b5fe;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+.dots .dot:hover {
+    background-color: #53c6fe;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+@media (max-width: 768px) {
+	.dots{
+		display: none;
+	}
+}
+
 /* end top slider */
 
 /************************* accordeon **************************/
@@ -1085,11 +1134,11 @@ video#video_background {
 
 .arrow-left {
 	transform: rotate(180deg);
-	margin-right: 20px;
+	left: 46%;
 }
 
 .arrow-right {
-	margin-left: 20px;
+	left: 53%;
 }
 
 .services-section .element {
@@ -1202,8 +1251,9 @@ video#video_background {
 	overflow: hidden;
 }
 .services-elements img {
-	width: 100%;
+	top: 90%;	
 }
+
 .services-elements > .row > hr:nth-of-type(2n) {
 	clear: both;
 }

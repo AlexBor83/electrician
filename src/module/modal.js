@@ -9,7 +9,7 @@ const modal = () => {
   // .button-services
 
   body.addEventListener('click', (e) => {
-    if (e.target.closest('.callback-btn') || e.target.closest('.button-services')) {
+    if (e.target.closest('.callback-btn') || e.target.closest('.button-services') || e.target.closest('.fancyboxModal')) {
       e.preventDefault();
       modalOverlay.style.display = 'block';
 

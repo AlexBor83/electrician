@@ -20,6 +20,8 @@
 		rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- STYLESHEETS :: TEMPLATE -->
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<link href="css/style.css" rel="stylesheet">
 	<script src="./js/main.js" defer></script>
 </head>
@@ -95,7 +97,7 @@
 
 		<!-- * * * * * * Top slider * * * * * * -->
 		<div class="top-slider white text-center relative">
-			<div class="item relative"
+			<div class="item relative item-active"
 				style="background: url(images/slide1.jpg) 50% 50% no-repeat; background-size: cover;">
 				<div class="table">
 					<div class="table-cell">
@@ -143,7 +145,9 @@
 					</div>
 				</div>
 			</div>
+			<ul class="dots">
 
+			</ul>
 		</div>
 		<!-- * * * * * * Top slider: end * * * * * * -->
 
@@ -160,77 +164,77 @@
 				<div class="push40"></div>
 
 
-				<div class="services-elements">
-					<div class="row services-carousel">
-						<div class="col-sm-6 col-md-4">
-							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Аварийный выезд"></a>
-								<div class="img-wrapper">
-									<img src="images/service1.jpg">
-								</div>
-								<div class="element-content">
-									<div class="title-h5 upper">Аварийный выезд</div>
-									<div class="element-price">от 790 руб.</div>
-									<div class="text">
-										Идейные соображения высшего порядка, а также постоянный количественный рост и
-										сфера нашей активности способствует подготовки
-									</div>
+				<div class="services-elements swiper" style="padding-bottom: 100px;">
+					<div class="row services-carousel swiper-wrapper">
+						<div class="col-sm-6 col-md-4 swiper-slide element relative">
+
+							<a class="absolute fancyboxModal" href="#application"
+								data-application="Аварийный выезд"></a>
+							<div class="img-wrapper">
+								<img src="images/service1.jpg">
+							</div>
+							<div class="element-content">
+								<div class="title-h5 upper">Аварийный выезд</div>
+								<div class="element-price">от 790 руб.</div>
+								<div class="text">
+									Идейные соображения высшего порядка, а также постоянный количественный рост и
+									сфера нашей активности способствует подготовки
 								</div>
 							</div>
+
 						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Монтаж или замена электропроводки"></a>
-								<div class="img-wrapper">
-									<img src="images/service2.jpg">
-								</div>
-								<div class="element-content">
-									<div class="title-h5 upper">Монтаж или замена электропроводки</div>
-									<div class="element-price">от 1790 руб.</div>
-									<div class="text">
-										Идейные соображения высшего порядка, а также постоянный количественный рост и
-										сфера нашей активности способствует подготовки
-									</div>
+						<div class="col-sm-6 col-md-4 swiper-slide element relative">
+
+							<a class="absolute fancyboxModal" href="#application"
+								data-application="Монтаж или замена электропроводки"></a>
+							<div class="img-wrapper">
+								<img src="images/service2.jpg">
+							</div>
+							<div class="element-content">
+								<div class="title-h5 upper">Монтаж или замена электропроводки</div>
+								<div class="element-price">от 1790 руб.</div>
+								<div class="text">
+									Идейные соображения высшего порядка, а также постоянный количественный рост и
+									сфера нашей активности способствует подготовки
 								</div>
 							</div>
+
 						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Ремонт, замена, перенос розеток"></a>
-								<div class="img-wrapper">
-									<img src="images/service3.jpg">
-								</div>
-								<div class="element-content">
-									<div class="title-h5 upper">Ремонт, замена, перенос розеток</div>
-									<div class="element-price">от 990 руб.</div>
-									<div class="text">
-										Идейные соображения высшего порядка, а также постоянный количественный рост и
-										сфера нашей активности способствует подготовки
-									</div>
+						<div class="col-sm-6 col-md-4 swiper-slide element relative">
+
+							<a class="absolute fancyboxModal" href="#application"
+								data-application="Ремонт, замена, перенос розеток"></a>
+							<div class="img-wrapper">
+								<img src="images/service3.jpg">
+							</div>
+							<div class="element-content">
+								<div class="title-h5 upper">Ремонт, замена, перенос розеток</div>
+								<div class="element-price">от 990 руб.</div>
+								<div class="text">
+									Идейные соображения высшего порядка, а также постоянный количественный рост и
+									сфера нашей активности способствует подготовки
 								</div>
 							</div>
+
 						</div>
-						<div class="col-sm-6 col-md-4">
-							<div class="element relative">
-								<a class="absolute fancyboxModal" href="#application"
-									data-application="Замена электросчетчика"></a>
-								<div class="img-wrapper">
-									<img src="images/service4.jpg">
-								</div>
-								<div class="element-content">
-									<div class="title-h5 upper">Замена электросчетчика</div>
-									<div class="element-price">от 990 руб.</div>
-									<div class="text">
-										Идейные соображения высшего порядка, а также постоянный количественный рост и
-										сфера нашей активности способствует подготовки
-									</div>
+						<div class="col-sm-6 col-md-4 swiper-slide element relative">
+
+							<a class="absolute fancyboxModal" href="#application"
+								data-application="Замена электросчетчика"></a>
+							<div class="img-wrapper">
+								<img src="images/service4.jpg">
+							</div>
+							<div class="element-content">
+								<div class="title-h5 upper">Замена электросчетчика</div>
+								<div class="element-price">от 990 руб.</div>
+								<div class="text">
+									Идейные соображения высшего порядка, а также постоянный количественный рост и
+									сфера нашей активности способствует подготовки
 								</div>
 							</div>
+
 						</div>
-						<div class="col-sm-6 col-md-4">
+						<div class="col-sm-6 col-md-4 swiper-slide">
 							<div class="element relative">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Установка, замена люстры"></a>
@@ -247,7 +251,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-4">
+						<div class="col-sm-6 col-md-4 swiper-slide">
 							<div class="element relative">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Установка светильников"></a>
@@ -265,15 +269,12 @@
 							</div>
 						</div>
 					</div>
+					<div class="services-arrow">
+						<img class="arrow-left swiper-button-prev" src="images/right-arrow_1.svg" alt="arrow-left">
+						<img class="arrow-right swiper-button-next" src="images/right-arrow_1.svg" alt="arrow-right">
+					</div>
 				</div>
-
-				<div class="services-arrow">
-					<img class="arrow-left" src="images/right-arrow_1.svg" alt="arrow-left">
-					<img class="arrow-right" src="images/right-arrow_1.svg" alt="arrow-right">
-				</div>
-
 			</div>
-			<div class="push70"></div>
 			<div class="push20 hidden-xs"></div>
 		</section>
 		<!-- * * * * * * Services section: end * * * * * * -->

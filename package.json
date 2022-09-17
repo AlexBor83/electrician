@@ -19,6 +19,7 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "swiper": "^8.4.2"
   }
 }
