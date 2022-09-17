@@ -1,4 +1,3 @@
-import { animate } from './helpers';
 
 const scroll = () => {
   const body = document.querySelector('body');
@@ -15,30 +14,14 @@ const scroll = () => {
     let СoordinateYShowUpBtn = table.clientHeight;
     let СoordinateYDisableUpBtn = servicesSection.clientHeight;
 
-    if (scrolY >= СoordinateYShowUpBtn && scrolY < СoordinateYDisableUpBtn) {
+    if (scrolY >= СoordinateYShowUpBtn) {
       upBtn.style.display = 'block';
-    } else if (scrolY >= СoordinateYDisableUpBtn) {
-      upBtn.style.display = 'none';
     } else {
       upBtn.style.display = 'none';
     }
-
-    upBtn.addEventListener('click', () => {
-        
-        animate({
-            duration: 2000,
-            timing(timeFraction) {
-              return Math.pow(timeFraction, 2);
-            },
-            draw(progress) {
-            //   modalCallback.style.opacity = progress;
-            window.scrollTo(0, window.pageYOffset - progress*20)
-            },
-          });
-    })
   });
 
-//   плавный скрол ссылок
+  //   плавный скрол ссылок и кнопки
 
   body.addEventListener('click', (e) => {
     if (
@@ -53,6 +36,11 @@ const scroll = () => {
 
       document.getElementById(itemId).scrollIntoView({
         block: 'start',
+        behavior: 'smooth',
+      });
+    } else if (e.target.closest('.up')) {
+      window.scrollTo({
+        top: 0,
         behavior: 'smooth',
       });
     }
