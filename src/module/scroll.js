@@ -29,8 +29,7 @@ const scroll = () => {
       e.target.matches('.mobile-menu ul li a')
     ) {
       e.preventDefault();
-      console.log('click');
-
+      
       const item = e.target.closest('a');
       const itemId = item.getAttribute('href').substring(1);
 
