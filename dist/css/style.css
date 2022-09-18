@@ -282,7 +282,7 @@ a.absolute {
 	cursor: pointer;
 }
 .modal-callback {
-	display: none;
+	/* display: none; */
 	position: fixed;
 	top: 20%;
 	left: 50%;
@@ -292,6 +292,7 @@ a.absolute {
 	background: #fff;
 	padding: 55px 25px 35px;
 	z-index: 99;
+	opacity: 0;
 }
 #responseMessage .modal-content.error {
 	color: #2fab6d;
@@ -856,7 +857,14 @@ hr.white {
 	overflow: hidden;
 	height: 450px;
 	position: relative;
+	display: none;
 }
+
+.top-slider .item-active {
+	display: block;
+
+}
+
 .top-slider .item:before {
 	content: "";
 	display: block;
@@ -967,6 +975,48 @@ video#video_background {
 		height: 600px;
 	}
 }
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 20px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 10
+}
+.dots .dot {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: solid #fff;
+    display: inline-block;
+    -webkit-transition: background-color, -webkit-transform .4s;
+    transition: background-color, transform .4s, -webkit-transform .4s
+}
+.dots .dot-active {
+    background-color: #19b5fe;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+.dots .dot:hover {
+    background-color: #53c6fe;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+@media (max-width: 768px) {
+	.dots{
+		display: none;
+	}
+}
+
 /* end top slider */
 
 /************************* accordeon **************************/
@@ -1021,9 +1071,10 @@ video#video_background {
 .accordeon .element.active .title:before {
 	background: url(../images/minus.png) 50% 50% no-repeat #333;
 }
-.accordeon > div:first-of-type .element-content {
+.accordeon > .element.active .element-content {
 	display: block;
 }
+
 .accordeon .element .title:hover:before {
 	background-color: #333;
 }
@@ -1083,11 +1134,10 @@ video#video_background {
 
 .arrow-left {
 	transform: rotate(180deg);
-	margin-right: 20px;
+	left: 46%;
 }
-
 .arrow-right {
-	margin-left: 20px;
+	left: 53%;
 }
 
 .services-section .element {
@@ -1200,8 +1250,9 @@ video#video_background {
 	overflow: hidden;
 }
 .services-elements img {
-	width: 100%;
+	top: 90%;	
 }
+
 .services-elements > .row > hr:nth-of-type(2n) {
 	clear: both;
 }
@@ -1212,6 +1263,7 @@ video#video_background {
 }
 
 .up {
+	display: none;
 	position: fixed;
 	bottom: 50px;
 	right: 50px;
